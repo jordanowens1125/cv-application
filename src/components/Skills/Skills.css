@@ -1,0 +1,103 @@
+#Skills{
+    /* flex:1; */
+    padding:20px;
+    grid-area: Skills;
+    background-color: #072b47;
+    color: #eff3f3;
+    text-align: right;
+    position: relative;
+}
+
+#Skills #header{
+    border-bottom:solid white 1px;
+    border-top:solid white 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+#add-new{
+    width:30px;
+    height:30px
+}
+
+#Skills ul{
+    padding-top: 20px;
+    list-style-type: none;
+}
+
+#skills-list{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+#skill{
+    display: flex;
+    justify-content: space-between;
+}
+
+#skill p{
+    font-size: 95%;
+}
+
+#delete{
+    transition: .3s;
+}
+
+#delete:hover{
+    transform: scale(1.25);
+}
+
+#add-skills{
+    display: none;
+    flex-direction: column;
+    transition: .3s;
+    justify-content: left;
+    position: absolute;
+    padding:10px;
+    top:20px;
+    left:200px;
+    background-color: #2393ac;
+    opacity: .95;
+    z-index: 7;
+    align-items: flex-start;
+    color:white;
+}
+
+#add-new{
+    transition: .3s;
+}
+
+#add-new:hover{
+    transform: scale(1.25);
+}
+
+#add-skills #heading{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+}
+
+@media print {
+    #Education ul li #delete {
+        display:none;
+    }
+    #add-skills{
+        display:none;
+    }
+    #delete{
+        display: none;
+    }
+    /*  */
+    #skill{
+        justify-content: flex-end;
+    }
+    #add-new{
+        display: none;
+    }
+    #Skills #header{
+        justify-content: flex-end;
+    }
+}

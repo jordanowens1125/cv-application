@@ -1,0 +1,78 @@
+#About{
+    grid-area: About;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding: 20px;
+    height:250px;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    background: #eff3f3;
+    border: solid 1px #eff3f3;
+    opacity:.92;;
+    word-wrap: break-word;
+    width:800px;
+}
+#About *{
+    /* border: solid 2px red; */
+}
+
+#About h1{
+   color: #2393ac;
+}
+
+#aboutButton{
+    color: black;
+    background-color: #91ced6;
+    border-radius: 5px;
+    z-index: 1;
+    position: relative;
+}
+
+#heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#edit-about #header{
+    display: flex;
+    justify-content: space-between;
+}
+#edit-about{
+    position: absolute;
+    right:-25px;
+    top:40px;
+    width:300px;
+    display: none;
+    flex-direction: column;
+    z-index: 7;
+    background-color: #2393ac;
+    padding: 20px;
+    color: white;
+}
+
+input[type=text], select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #eff3f3;
+}
+
+#edit-about-pencil{
+    fill:#072b47;
+}
+
+  @media print {
+    #aboutButton {
+        display:none;
+    }
+    #edit{
+        display:none;
+    }
+    #edit-about-pencil{
+        display: none;
+    }
+  }

@@ -1,0 +1,149 @@
+#Experience{
+    /* padding: 20px; */
+    grid-area: Experience;
+    min-height: 150px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: #eff3f3;
+    opacity:.92;
+    position: relative;
+    z-index: 1;
+}
+
+#Experience h2{
+    border-bottom: solid 1px #2393ac;
+    border-top:solid 1px #2393ac;
+    color: #2393ac;
+}
+
+#Experience ul{
+    padding-top: 12px;
+    list-style-type: none; 
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+}
+
+#Experience ul li{
+    display: grid;
+    /* border: black 2px solid; */
+    padding-left: 5px ;
+    grid-template-columns: 250px 200px 200px 10px;
+    grid-template-areas: 
+    "date   company     company            delete"
+    "title  details     details     ."
+    ".      details     details     .";
+    gap:10px;
+    height:100px;
+}
+
+#Experience ul li #date{
+    grid-area: date;
+}
+
+#Experience ul li #title{
+    grid-area: title;
+}
+#Experience ul li #company{
+    grid-area: company;
+}
+#Experience ul li #details{
+    grid-area: details;
+}
+#Experience ul li #location{
+    grid-area: location;
+}
+#Experience ul li #delete{
+    grid-area: delete;
+    transition: .3s;
+    margin-left: 50px;
+}
+
+#Experience ul li img:hover{
+    fill:#eff3f3;
+    transform: scale(1.25);
+}
+
+#Experience #plus{
+    padding-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 80px;
+}
+
+#Experience #plus img{
+    transition: .5s;
+}
+
+#Experience #plus img:hover{
+    transform: scale(1.50);
+}
+
+#Experience #add-experience{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    background-color: #2393ac;
+    justify-content: center;
+    padding: 20px;
+    height:250px;
+    width:700px;
+    right:20px;
+    top:0px;
+    bottom: 0px;
+    z-index: 7;
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header header  header  header"
+    ".      .       details details"
+    ".      .       details details"
+    "submit submit  submit  submit"
+    ;
+    color: white;
+}
+
+#Experience #add-experience input[type=submit]{
+    grid-area: submit;
+    margin-top: 10px;
+    align-self: center;
+    /* width: 60%; */
+}
+
+#add-experience #heading{
+    grid-area: header;
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#add-experience div{
+    display: flex;
+    flex-direction: column;
+}
+#experience-details{
+    grid-area: details;
+    justify-self: flex-end;
+    height: 90%;
+    width: 100%;
+}
+#experience-details textarea{
+    height: 100%;
+    border-radius: 6px;
+    opacity: .92;
+}
+
+#Experience ul li #delete {
+    fill:#072b47;
+}
+
+@media print {
+    #Experience ul li #delete {
+        display:none;
+    }
+    #Experience #plus{
+        display:none;
+    }
+}
