@@ -6,30 +6,24 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-body{
-  
-}
-
-img{
+svg{
   fill:currentColor;
 }
 
 .App{
-  /* top: 45%;    
-  left: 50%; 
-  transform: translate(-50%, -50%);
-  position: absolute; */
   background-image: url("./background-img.jpg");
   background-position: center;
   background-size: cover;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin:auto;
   width:1100px;
-  max-height:1420px;
+  height:1420px;
+  position: relative;
 }
 
-.resume{
+#resume{
   display: grid;
   grid-template-columns: 200px auto;
   grid-template-areas: 
@@ -39,18 +33,41 @@ img{
   ;
   margin: auto;
   z-index:3;
-  max-width: 1000px;
-  min-height:750px;
+  width: 1000px;
+  height: 1300px;
   padding: 20px;
   overflow: hidden;
 }
 
 .nav{
-  border: solid pink 1px;
   display: flex;
-  position: absolute;
+  position: fixed;
   width: 1100px;
   background-color: #062946;
+  top: 0;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  height:50px;
+  width:100%;
+  align-items: center;
+  justify-content: center;
+  z-index:10;
+}
+
+.nav button{
+  height:100%;
+  background-color: #072b47;
+  color:white;
+  padding: 10px;
+  border: white solid 1px;
+  transition: .3s;
+}
+
+.nav button:hover{
+  transform: scale(1.1);
 }
 
 svg{
@@ -74,12 +91,25 @@ input[type=submit]{
     print-color-adjust: exact;
   }
   .App{
-    height:1420vh;
+    height:1420px;
   }
   .nav{
-    display:none;
+    display:none !important;
   }
   .wrapper{
-    display: none;
+    display: none !important;
+  }
+  .plus{
+    display: none !important;
+  }
+  .delete{
+    display: none !important;
+  }
+  svg{
+    display: none !important;
+  }
+  .App{
+    align-items: center;
+    justify-content: center;
   }
 }

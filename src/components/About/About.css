@@ -6,15 +6,12 @@
     padding: 20px;
     height:250px;
     box-sizing: border-box;
-    /* overflow: hidden; */
     background: #eff3f3;
-    border: solid 1px #eff3f3;
+    /* border: solid 1px #eff3f3; */
     opacity:.92;;
     word-wrap: break-word;
     width:800px;
-}
-#About *{
-    /* border: solid 2px red; */
+    position:relative;
 }
 
 #About h1{
@@ -29,19 +26,24 @@
     position: relative;
 }
 
-#heading{
+#header{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-#edit-about #header{
+
+#edit-about #heading{
     display: flex;
     justify-content: space-between;
 }
-#edit-about{
+
+#edit{
     position: absolute;
-    right:-25px;
-    top:40px;
+    top:0;
+    right: 0;
+}
+
+#edit-about{
     width:300px;
     display: none;
     flex-direction: column;

@@ -10,6 +10,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 10;
 }
 
 #profile{
@@ -28,39 +29,32 @@
     background-size: cover;
     overflow: hidden;
     background-position: center;
-    
 }
 
 #edit-profile{
     display: flex;
     flex-direction: column;
     background-color: #2393ac;
-    position: absolute;
-    top: 0;
-    width: 160px;
     padding: 10px;
 }
 
-#change-url{
+#HeadShot .plus{
     position: absolute;
-    top:0;
-    left:200px;
-    z-index: 7;
+    left:50px;
+    top:40px;
     background-color: #2393ac;
     opacity: .95;
-    z-index: 7;
 }
-
-#change-url, #profile svg{
+.plus, #profile svg{
     transition: .3s;
 }
 
-#change-url, #profile svg:hover{
+.plus, #profile svg:hover{
     transform: scale(1.25);
 }
 
 @media print {
-    #change-url, #profile svg{
+    .plus, #profile svg{
         display:none;
     }
 }

@@ -20,14 +20,6 @@ const objects = [
     "Minor":   "Minor",
     "GPA": 4.0,
   },
-  {
-    "School": "Cool University",
-    "Degree": "B.S Web Development",
-    "Start":  "JULY 2020",
-    "End":  "JULY 2020",
-    "Minor":   "Lorem ipsum dolor",
-    "GPA": 4.0,
-  },
 ]
 const Education = () => {
   const [schools ,setSchools] = useState(objects)
@@ -109,15 +101,16 @@ const Education = () => {
             )
           }
       </ul>
-      <div id='plus'>
       <svg fill="currentColor" 
           width="20px" 
           height="20px" 
           onClick={handleClick}
           viewBox="0 0 1920 1920" 
           xmlns="http://www.w3.org/2000/svg">
-          <path d="M866.332 213v653.332H213v186.666h653.332v653.332h186.666v-653.332h653.332V866.332h-653.332V213z" fill-rule="evenodd"/>
-        </svg>
+          <path d="M866.332 213v653.332H213v186.666h653.332v653.332h186.666v-653.332h653.332V866.332h-653.332V213z" 
+          fillRule="evenodd"/>
+      </svg>
+      <div className='plus' style={{"display":open ? 'grid' : 'none'}}>
         <div id='add-education' ref={impactRef} className="wrapper" style={{"display":open ? 'grid' : 'none'}}>
           <div id="heading">
               <h4>New Education</h4>

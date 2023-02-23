@@ -33,32 +33,32 @@
     gap:5px;
 }
 
-#skill{
+.skill{
     display: flex;
     justify-content: space-between;
 }
 
-#skill p{
+.skill p{
     font-size: 95%;
 }
 
-#delete{
+.delete{
     transition: .3s;
 }
 
-#delete:hover{
+.delete:hover{
     transform: scale(1.25);
 }
 
-#add-skills{
+.plus{
     display: none;
     flex-direction: column;
     transition: .3s;
     justify-content: left;
     position: absolute;
     padding:10px;
-    top:20px;
-    left:200px;
+    top:30px;
+    left:225px;
     background-color: #2393ac;
     opacity: .95;
     z-index: 7;
@@ -74,30 +74,21 @@
     transform: scale(1.25);
 }
 
-#add-skills #heading{
+.plus #heading{
     display: flex;
     justify-content: space-between;
     width:100%;
 }
 
 @media print {
-    #Education ul li #delete {
+    @page { size: auto;  margin: 0mm; }
+    #Skills .plus{
         display:none;
     }
-    #add-skills{
-        display:none;
-    }
-    #delete{
+    .delete{
         display: none;
-    }
-    /*  */
-    #skill{
-        justify-content: flex-end;
     }
     #add-new{
         display: none;
-    }
-    #Skills #header{
-        justify-content: flex-end;
     }
 }

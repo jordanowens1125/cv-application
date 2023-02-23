@@ -4,20 +4,22 @@ import './HeadShot.css'
 const HeadShot = () => {
   const [open, setOpen] = useState(false)
   const impactRef = useRef();
-  const handleClick = () => {
-    setOpen(!open)
+  const handleClick = (e) => {
+    setOpen(true)
   }
   const handleClose = (e) =>{
     let element = document.getElementById('url')
     element.value = ''
     setOpen(false)
   }
-  useOutsideClick(impactRef, () => setOpen(false)); //Change my dropdown state to close when clicked outside
+
+  useOutsideClick(impactRef, () => handleClose()); //Change my dropdown state to close when clicked outside
   const updateURL = () => {
     let element = document.getElementById('url')
     let value = element.value
     document.getElementById("profile-img").style.backgroundImage = `url(${value})`
     element.value = ''
+    handleClose()
   }
   return (
     <div id='HeadShot'>
@@ -35,7 +37,7 @@ const HeadShot = () => {
         </svg>
         <div id="profile-img" ></div>
       </div>
-      <div id='change-url'>
+      <div className='plus' style={{"display":open ? 'flex' : 'none'}}>
         <div id='edit-profile' ref={impactRef} className="wrapper" style={{"display":open ? 'flex' : 'none'}}>
           <div id='heading'>
             <label htmlFor="name">Image URL</label>

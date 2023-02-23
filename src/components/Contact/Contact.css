@@ -7,14 +7,13 @@
     grid-area: Contact;
     background-color: #072b47;
     color: #eff3f3;
-    text-align: right;
-    min-height: 20px;;
+    text-align: left;
+    height: 250px;
     position:relative;
 }
 
 #Contact div{
     border-bottom: 1px #b4bcbf solid;
-    /* padding-bottom: 5px; */
 }
 
 #Contact #header{
@@ -33,24 +32,30 @@
 #Contact #header svg:hover{
     transform: scale(1.25);
 }
-
+#Contact #plus{
+    position: absolute;
+    top:20px;
+    right:1px;
+}
 #update-contact{
     flex-direction: column;
     position: absolute;
     z-index: 7;
-    left:250px;
-    top:290px;
     padding:10px;
     background-color: #2393ac;
     opacity: .92;
     color: white;
+    align-items: flex-start;
 }
-#update-contact #header{
+#update-contact #heading{
     display: flex;
     justify-content: space-between;
+    border: none;
+    padding-bottom: 20px;
+    width: 100%;
 }
 /* Target first child */
-#Contact div:first-child{
+#Contact #header {
     border-top:1px #b4bcbf solid;
 }
 
@@ -60,9 +65,6 @@
     }
     #plus{
         display: none;
-    }
-    #Contact #header{
-        justify-content: flex-end;
     }
     #Contact #header svg{
         display: none;

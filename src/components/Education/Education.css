@@ -1,13 +1,13 @@
 #Education{
     grid-area: Education;
-    min-height: 150px;
+    height: 250px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     background: #eff3f3;
     opacity:.92;
     position: relative;
-    z-index: 3;
+    z-index: 2;
 }
 
 #Education h2{
@@ -67,40 +67,35 @@
     transform: scale(1.25);
 }
 
-#Education #plus{
-    padding-top: 10px;
-    display: flex;
-    padding-left: 80px;
-    opacity: 1;
+#Education .plus{
+    position: absolute;
+    top: -150px;
+    left: 80px;
+    background-color: #2393ac;
 }
 
-#Education #plus svg{
+#Education .plus svg{
     transition: .5s;
-    fill:#072b47;
+    
 }
 
-#Education #plus svg:hover{
+#Education .plus svg:hover{
     transform: scale(1.50);
 }
 
-#Education #add-education{
-    display: grid;
-    position: absolute;
+.plus #add-education{
+    display: none;
     align-items: center;
-    background-color: #2393ac;
-    padding: 20px;
     z-index:7;
-    height:350px;
-    width:650px;
-    right:20px;
-    top:20px;
+    height:300px;
+    width:625px;
+    opacity: 1;
     grid-template-areas: 
     "header header"
     ".          ."
     ".          ."
     ".          ."
-    "submit     submit"
-    ;
+    "submit     submit";
     gap: 10px;
     color: white;
 }
@@ -133,7 +128,13 @@
     #Education ul li #delete {
         display:none;
     }
-    #Education #plus{
-        display:none;
+    #Education .plus{
+        display: none !important;
+    }
+    #Education .plus *{
+        display:none !important;
+    }
+    #add-education{
+        display: none;
     }
 }
